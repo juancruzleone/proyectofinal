@@ -1,0 +1,28 @@
+Falta:
+- Darle funcion al formulario de contacto
+- Crear el listado de productos para hacer la seccion de productos
+- Crear seccion servicios (LISTO)
+- Hacer carrito de compras
+- Hacer seccion de certificados
+- Hacer carrousel de obras en el home
+- Cambiar los iconos en las cards del home (LISTO)
+- Hacer el footer
+
+- Hacerla responsive
+- Hacerla PWA
+
+
+
+- Terminar seccion home (Texto nuestra APP(LISTO), Obras "carrousel de obras??")
+- Termina seccion contacto (Agregarle funcion)
+- Hacer detalle de cada servicio
+- Hacer carrito de compras
+- Hacer footer
+- Hacer seccion de certificados
+- Hacer secciones de productos
+
+Hacerla PWA
+Hacerla responsive
+
+Ver que funcion se le puede agregar 
+Ver si se puede agregar una funcion que vincule la web con la app
