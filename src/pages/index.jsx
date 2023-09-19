@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 import Layout from '@/components/layout'
 import Footer from '@/components/Footer'
 import styles from '@/styles/Home.module.css'
@@ -10,15 +11,17 @@ const Home = () => {
         <Layout>
             {/*Ordenar mejor el codigo de nuestra App, para que el titulo quede en el mismo contenedor que el parrafo y haga display flex con el circulo y la imagen*/}
             <h1 className={styles.tituloHome}>INELAR</h1>
-            <h2 className={styles.subtituloApp}>Nuestra APP</h2>
+          
             <div className={styles.contenedorNuestraApp}>
                 <div className={styles.circulo}>
                     <div className={styles.celularApp}>
-                        <img src="/app.png" alt="mockup app mobile inelar" className={styles.celularImagen} />
+                        <Image src="/app.webp" alt="mockup app mobile inelar" className={styles.celularImagen} width={200} height={270} />
                     </div>
                 </div>
                 <div className={styles.contenedorTextoNuestraApp}>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lorem augue, auctor a iaculis quis, scelerisque ac turpis. Sed sagittis libero non mauris placerat ullamcorper. Integer sodales urna eu nibh molestie viverra. Etiam volutpat facilisis arcu nec pellentesque. Praesent eget nisi sed ligula laoreet fermentum. Sed sed congue leo. Nullam malesuada nulla sapien, vitae gravida quams efficitur id. In finibus scelerisque nulla, et suscipit lorem sollicitudin non. Nunc pulvinar porttitor luctus. Suspendisse ultrices ex quis tortor luctus vestibulum. Quisque egestas nulla in quam sollicitudin, quis auctor libero luctus.</p>
+                <h2 className={styles.subtituloApp}>Descubre Nuestra App</h2>
+                    <p>¡Bienvenido a la puerta de entrada a la innovación tecnológica! En INELAR, hemos creado una aplicación revolucionaria pensando en ti y en la simplicidad de mantener tus dispositivos siempre en óptimas condiciones.</p><br></br>
+                    <p>Nuestra App es tu solución para un mantenimiento rápido y efectivo. Imagina tener el control total de tus dispositivos con tan solo un escaneo de código QR. Es fácil, rápido y está diseñado pensando en ti.</p>
                 </div>
             </div>
 
@@ -29,25 +32,25 @@ const Home = () => {
                     <div className={styles.cajaServicios}>
                         <h3 className={styles.nombreServicios}>Instalaciones</h3>
                         <a href="/instalaciones">
-                            <img src="/instalaciones.png" alt="icono detector" className={styles.iconoServicios}/>
+                            <Image src="/instalaciones.webp" alt="icono detector" className={styles.iconoServicios} width={140} height={140}/>
                         </a>      
                     </div>
                     <div className={styles.cajaServicios}>
                         <h3 className={styles.nombreServicios}>Mantenimientos</h3>
                         <a href="/mantenimientos">
-                            <img src="/mantenimiento.png" alt="icono mantenimientos" className={styles.iconoServicios}/>
+                            <Image src="/mantenimiento.webp" alt="icono mantenimientos" className={styles.iconoServicios} width={140} height={140}/>
                         </a>      
                     </div>
                     <div className={styles.cajaServicios}>
                         <h3 className={styles.nombreServicios}>Servicio técnico</h3>
                         <a href="/serviciotecnico">
-                            <img src="/servicio-tecnico.png" alt="icono servicio técnico" className={styles.iconoServicios}/>
+                            <Image src="/servicio-tecnico.webp" alt="icono servicio técnico" className={styles.iconoServicios} width={140} height={140}/>
                         </a>
                     </div>
                     <div className={styles.cajaServicios}>
                         <h3 className={styles.nombreServicios}>Provisiones</h3>
                         <a href="/provisiones">
-                            <img src="/provisiones.png" alt="icono provisiones" className={styles.iconoServicios}/>
+                            <Image src="/provisiones.webp" alt="icono provisiones" className={styles.iconoServicios} width={140} height={140}/>
                         </a>
                     </div>
                 </div> 

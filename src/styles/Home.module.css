@@ -286,8 +286,8 @@
   font-family: "montserrat", sans-serif;
   color: #C75F00;
   font-size: 32px;
-  text-align: center;
-  margin-top: 380px;
+  text-align: left;
+  padding-bottom: 10px;
 }
 
 .tituloFooter{
@@ -305,7 +305,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 60px;
+  margin-top: 420px;
   margin-bottom: 60px;
 }
 
@@ -313,9 +313,10 @@
   font-family: "montserrat", sans-serif;
   margin: 140px;
   margin-top: 0; /* Elimina el margen superior negativo */
-  display: flex; /* Utiliza Flexbox */
   justify-content: center; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
+
+ 
 }
 
 
@@ -331,11 +332,6 @@
   position: relative;
   padding: 100px;
   margin-left: 300px;
-  margin-top: -100px;
-}
-
-.celularImagen {
-  width: 200px;
 }
 
 .contenedorServicios{

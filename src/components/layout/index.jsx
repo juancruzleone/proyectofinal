@@ -1,6 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
-import styles from '@/styles/Home.module.css'
+import styles from '@/styles/Home.module.css';
 
 const Layout = ({ children }) => {
     return (
@@ -14,7 +15,7 @@ const Layout = ({ children }) => {
                 <Link href="/certificaciones" className={styles.seccionesNav}>Certificaciones</Link>
                 <Link href="/contacto" className={styles.seccionesNav}>Contacto</Link>
                 <a href="/carrito" className={styles.carrito}>
-                    <img src="/carrito.png" alt="Carrito" className={styles.carrito}/>
+                    <Image src="/carrito.webp" alt="Carrito" className={styles.carrito} width={40} height={40}/>
                 </a>
             </nav>
             {children}
