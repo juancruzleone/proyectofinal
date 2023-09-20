@@ -1,9 +1,84 @@
-import React from "react";
+import React, { useState } from "react";
 import Layout from "@/components/layout";
 import Footer from "@/components/Footer";
 import styles from "@/styles/Home.module.css";
 
 const Contacto = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [formErrors, setFormErrors] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const validateEmail = (email) => {
+    const parts = email.split("@");
+    if (parts.length !== 2) {
+      return false;
+    }
+    const [localPart, domain] = parts;
+    if (localPart.trim() === "") {
+      return false;
+    }
+    if (!domain.includes(".")) {
+      return false;
+    }
+    if (domain.startsWith(".") || domain.endsWith(".")) {
+      return false;
+    }
+    const domainParts = domain.split(".");
+    if (domainParts.some(part => !/^[a-zA-Z0-9-]+$/.test(part))) {
+      return false;
+    }
+    return true;
+  };
+
+  const validateForm = () => {
+    let valid = true;
+    const newErrors = {
+      name: "",
+      email: "",
+      message: "",
+    };
+
+    if (formData.name.trim() === "") {
+      newErrors.name = "Este campo es requerido";
+      valid = false;
+    }
+
+    if (!validateEmail(formData.email)) {
+      newErrors.email = "Ingresa un correo electrónico válido";
+      valid = false;
+    }
+
+    if (formData.message.trim() === "") {
+      newErrors.message = "Este campo es requerido";
+      valid = false;
+    }
+
+    setFormErrors(newErrors);
+    return valid;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validateForm()) {
+      console.log("Formulario válido. Datos a enviar:", formData);
+    }
+  };
+
   return (
     <Layout>
       <h1 className={styles.tituloPaginas}>Contactános</h1>
@@ -22,13 +97,34 @@ const Contacto = () => {
           <address>Monroe 4191 - Buenos Aires (C1430BLF) Argentina.</address>
         </div>
         <div className={styles.contenedorFormulario}>
-          <form action="" className={styles.formulario}>
+          <form className={styles.formulario} onSubmit={handleSubmit}>
             <label htmlFor="name">Nombre:</label>
-            <input type="text" id="name" name="name" />
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleInputChange}
+            />
+            <span className="error">{formErrors.name}</span>
             <label htmlFor="email">Email:</label>
-            <input type="email" id="email" name="email" />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleInputChange}
+            />
+            <span className="error">{formErrors.email}</span>
             <label htmlFor="message">Mensaje:</label>
-            <textarea id="message" name="message" rows="4" />
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              value={formData.message}
+              onChange={handleInputChange}
+            />
+            <span className="error">{formErrors.message}</span>
             <button type="submit">Enviar</button>
           </form>
         </div>
