@@ -9,7 +9,6 @@ const Home = () => {
     <Layout>
       {/*Ordenar mejor el codigo de nuestra App, para que el titulo quede en el mismo contenedor que el parrafo y haga display flex con el circulo y la imagen*/}
       <h1 className={styles.tituloHome}>INELAR</h1>
-
       <div className={styles.contenedorNuestraApp}>
         <div className={styles.circulo}>
           <div className={styles.celularApp}>

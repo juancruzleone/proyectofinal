@@ -8,6 +8,7 @@ const servicioTecnico = () => {
     <Layout>
       <h1 className={styles.tituloPaginas}>Servicio técnico</h1>
       <div className={styles.contenedorServicioTecnico}>
+        <p>Inelar realiza servicio técnico</p>
         
       </div>
       <Footer></Footer>

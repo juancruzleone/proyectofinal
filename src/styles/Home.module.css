@@ -331,7 +331,7 @@
   align-items: center;
   position: relative;
   padding: 100px;
-  margin-left: 300px;
+  margin-left: 200px;
 }
 
 .contenedorServicios{
@@ -448,6 +448,7 @@
 
 .cajaServicios:hover{
   background-color: #C75F00;
+  cursor: pointer;
 }
 
 .contenedorCardServicios{
@@ -646,6 +647,30 @@
 
 .contenedorPreguntasFrecuentes h2{
   font-family: "montserrat", sans-serif;
+}
+
+.ContenedorMantenimientos{
+  padding: 60px;
+  font-family: "montserrat", sans-serif;
+}
+
+.contenedorControlMantenimiento{
+  font-family: "montserrat", sans-serif;
+  padding: 60px;
+}
+
+.contenedorControlMantenimiento p{
+  padding-top: 15px;
+}
+
+.contenedorServicioTecnico{
+  padding: 60px;
+  font-family: "montserrat", sans-serif;
+}
+
+.contenedorInstalaciones{
+  padding: 60px;
+  font-family: "montserrat", sans-serif
 }
 
 

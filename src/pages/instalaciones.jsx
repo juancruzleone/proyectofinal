@@ -8,7 +8,7 @@ const Instalaciones = () => {
     <Layout>
       <h1 className={styles.tituloPaginas}>Instalaciones</h1>
       <div className={styles.contenedorInstalaciones}>
-        <p></p>
+        <p>Inelar realiza instalaciones</p>
       </div>
       <Footer></Footer>
     </Layout>
