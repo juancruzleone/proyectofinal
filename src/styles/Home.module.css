@@ -331,7 +331,7 @@
   align-items: center;
   position: relative;
   padding: 100px;
-  margin-left: 200px;
+  margin-left: 300px;
 }
 
 .contenedorServicios{
@@ -448,7 +448,6 @@
 
 .cajaServicios:hover{
   background-color: #C75F00;
-  cursor: pointer;
 }
 
 .contenedorCardServicios{
@@ -639,7 +638,9 @@
   padding: 10px;
   margin: 12px;
   border-radius: 6px;
+
 }
+
 
 .contenedorPreguntasFrecuentes:hover{
   background-color: #f57600;
@@ -649,31 +650,86 @@
   font-family: "montserrat", sans-serif;
 }
 
-.ContenedorMantenimientos{
-  padding: 60px;
+.respuesta {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.respuestaVisible {
+  max-height: 1000px; /* Ajusta la altura máxima deseada */
+}
+
+
+.tituloPaginas {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.posicionPreguntasFrecuentes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.contenedorPreguntaRespuesta {
+  width: 600px;
+  height: 60px;
+  background-color: #C75F00;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.contenedorPreguntaRespuesta:hover{
+  background-color: #f57600;
+}
+
+.toggleButton {
+  font-size: 24px;
+  float: right;
+  cursor: pointer;
+  background-color: black;
+  border: none;
+  outline: none;
+}
+
+.toggleButton:hover {
+  color: #007bff;
+}
+
+#pregunta {
+  font-size: 18px;
+  margin: 10px 0;
+  cursor: pointer;
+  color: white;
   font-family: "montserrat", sans-serif;
 }
 
-.contenedorControlMantenimiento{
+.respuesta {
+  display: none;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius:10px;
+}
+
+.respuestaVisible {
+  display: block;
+}
+
+#titulosPreguntas{
   font-family: "montserrat", sans-serif;
-  padding: 60px;
+  font-size: 20px;
 }
 
-.contenedorControlMantenimiento p{
-  padding-top: 15px;
-}
-
-.contenedorServicioTecnico{
-  padding: 60px;
+#respuestasPreguntas{
   font-family: "montserrat", sans-serif;
+  font-size: 16px;
+  color: black;
 }
-
-.contenedorInstalaciones{
-  padding: 60px;
-  font-family: "montserrat", sans-serif
-}
-
-
 
 
 
