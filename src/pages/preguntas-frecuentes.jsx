@@ -28,9 +28,9 @@ const PreguntasFrecuentes = () => {
         "Puedes ponerte en contacto con nosotros a través de nuestro correo electrónico de contacto: info@inelar.com o llamando al número de teléfono +123-456-789.",
     },
     {
-      pregunta: "¿Inelar ofrece servicios de diseño de aplicaciones móviles?",
+      pregunta: "¿Cuáles son los servicios que ofrece Inelar en el ámbito de seguridad contra incendios?",
       respuesta:
-        "Sí, en Inelar ofrecemos servicios de diseño y desarrollo de aplicaciones móviles tanto para Android como para iOS. Creamos aplicaciones a medida que se adapten a las necesidades de tu negocio.",
+        "Inelar es una empresa especializada en seguridad contra incendios. Ofrecemos una amplia gama de servicios que incluyen la instalación y mantenimiento de sistemas de detección de incendios, extintores, sistemas de rociadores, y capacitación en seguridad contra incendios. Nuestro objetivo es garantizar la seguridad y protección de tu negocio frente a posibles incendios.",
     },
     {
       pregunta: "¿Inelar proporciona soporte técnico y mantenimiento continuo?",
