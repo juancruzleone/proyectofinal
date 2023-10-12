@@ -16,6 +16,7 @@ const Mantenimientos = () => {
         <h2>Control</h2>
         <p className={styles.textoServicios}>Se lleva a cabó un mantenimiento después de, </p>
       </div>
+      <a className={styles.botonSolicitarServicio}>Solicitar Manteninimiento</a>
     
       <Footer></Footer>
     </Layout>

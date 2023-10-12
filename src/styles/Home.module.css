@@ -945,3 +945,16 @@
   font-family: "montserrat", sans-serif;
   font-style:italic
 }
+
+.botonSolicitarServicio{
+  padding: 4px;
+  border-radius: 4px;
+  font-family: "montserrat", sans-serif;
+  font-size: 18px;
+  background-color: #C75F00;
+  color: white;
+}
+
+.botonSolicitarServicio:hover{
+  background-color: #f57600;
+}
