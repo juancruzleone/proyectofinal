@@ -64,7 +64,7 @@ const Home = () => {
             Nuestra App es tu solución para un mantenimiento rápido y efectivo.
             Imagina tener el control total de tus dispositivos con tan solo un
             escaneo de código QR. Es fácil, rápido y está diseñado pensando en
-            ti.
+            los usuarios.
           </p>
         </div>
       </div>
