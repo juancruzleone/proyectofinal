@@ -1384,6 +1384,37 @@
   margin-bottom: 15px;
 }
 
+.contenedorPanelAdmin{
+  margin: auto;
+  margin-top: 80px;
+  display: flex;
+}
+
+.navPanel a{
+  display: block;
+  background-color: #C75F00;
+  margin: 10px;
+  border-radius: 5px;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+}
+
+.navPanel a:hover{
+  background-color:#f57600
+}
+
+.contenedorPanelAdmin .contenedorContenidoPanel{
+  margin: auto;
+}
+
+.contenedorContenidoPanel{
+  background-color: #121212;
+  border-radius: 10px;
+  width: 1000px;
+  height: 700px;
+}
+
 
 
 
