@@ -1324,6 +1324,8 @@
   font-size: 21px;
   padding-left: 30px;
   padding-top: 30px;
+  text-align: center;
+  margin-top: 10px;
   /*text-decoration: underline 5px #C75F00;*/
 }
 
@@ -1336,9 +1338,7 @@
   margin-right: 80px;
 }
 
-.contenedorSeccionCarrito{
-  display: flex;
-}
+
 
 .form{
   display: flex;
@@ -1415,6 +1415,19 @@
   height: 700px;
 }
 
+.botonIrCheckout{
+  background-color: green;
+  color: white;
+  font-family: "montserrat", sans-serif;
+  text-align: light;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 800px;
+  padding: 15px;
+  border-radius: 4px;
+  margin-top: 15px;
+}
 
 
 

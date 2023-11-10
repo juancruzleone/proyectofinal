@@ -14,9 +14,7 @@ const carrito = () => {
           <h3>Productos en el carrito</h3>
         
         </div>
-        <div className={styles.contenedorDatosPagos}>
-
-        </div>
+        <Link href="" className={styles.botonIrCheckout}>Proceder al checkout</Link>
       </div>
       
       <Footer></Footer>
