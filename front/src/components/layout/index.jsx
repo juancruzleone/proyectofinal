@@ -28,6 +28,9 @@ const Layout = ({ children }) => {
         <Link href="/contacto" className={styles.seccionesNav}>
           Contacto
         </Link>
+        <Link href="/panel" className={styles.seccionesNav}>
+          Panel admin
+        </Link>
         <a href="/carrito" className={styles.carrito}>
           <Image
             src="/carrito.webp"
