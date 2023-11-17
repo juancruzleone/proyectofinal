@@ -31,6 +31,15 @@ const Layout = ({ children }) => {
         <Link href="/panel" className={styles.seccionesNav}>
           Panel admin
         </Link>
+        <a href="/prelogin" className={styles.sesion}>
+          <Image
+            src="/carrito.webp"
+            alt="Carrito"
+            className={styles.carrito}
+            width={40}
+            height={40}
+          />
+        </a>
         <a href="/carrito" className={styles.carrito}>
           <Image
             src="/carrito.webp"

@@ -16,7 +16,7 @@ const Productos = () => {
     {
       nombre: "Central de control",
       descripcion: "Detector de monóxido de carbono para prevenir intoxicaciones.",
-      imagen: "central.png",
+      imagen: "central.webp",
       precio: "$60",
     },
     {

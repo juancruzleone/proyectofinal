@@ -34,7 +34,7 @@ export default function App() {
           className={styles.parallaxBg}
           style={{
             'background-image':
-              'url(/garrahan.jpg)',
+              'url(/garrahan.webp)',
           }}
           data-swiper-parallax="-23%"
         ></div>
@@ -50,7 +50,7 @@ export default function App() {
         </SwiperSlide>
         <SwiperSlide className={styles.carrousel}  style={{
             'background-image':
-              'url(/credicop.jpg)',
+              'url(/credicop.webp)',
           }}>
           <div className={styles.tituloObras} data-swiper-parallax="-3  00">
             <h3>Banco Credicoop</h3>
@@ -61,7 +61,7 @@ export default function App() {
         </SwiperSlide>
         <SwiperSlide className={styles.carrousel} style={{
             'background-image':
-              'url(/enel.jpg)',
+              'url(/enel.webp)',
           }}>
           <div className={styles.tituloObras} data-swiper-parallax="-300">
             <h3>Enel, El chocón</h3>
