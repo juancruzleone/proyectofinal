@@ -16,7 +16,7 @@ const Provisiones = () => {
           <p className={styles.textoServicios}>Accede a nuestro amplio catálogo de provisiones tecnológicas y cuéntanos qué necesitas. Nuestro equipo de expertos te ayudará a elegir la mejor opción según tus necesidades y te proporcionará todas las herramientas que necesitas para llevar a cabo tu proyecto.</p>
         </div>
         <Image
-          src="/servicio-provisiones-.jpg"
+          src="/servicio-provisiones-.webp"
           alt="Imagen servicio provisiones"
           className={styles.fotoServicio}
           width={400}

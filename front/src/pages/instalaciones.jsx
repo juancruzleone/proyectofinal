@@ -16,7 +16,7 @@ const Instalaciones = () => {
           <p className={styles.textoServicios}>Nos encargamos de todo el proceso de instalación, desde la evaluación de tus necesidades hasta la configuración y puesta en marcha de los dispositivos. Además, utilizamos equipos de alta calidad y tecnología de vanguardia para garantizar la máxima eficiencia y durabilidad.</p>
         </div>
         <Image
-          src="/servicio-instalaciones-imagen.png"
+          src="/servicio-instalaciones-imagen.webp"
           alt="Imagen servicio instalaciones"
           className={styles.fotoServicio}
           width={400}

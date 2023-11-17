@@ -11,7 +11,7 @@ const detalleProducto = () => {
         <div className={styles.contenedorDetalleProducto}>
             <div className={styles.contenedorProducto}>
                 <Image
-                    src={`/detecte-de-humo.png`}
+                    src={`/detecte-de-humo.webp`}
                     alt= "Detector de humo"
                     width={150}
                     height={180}

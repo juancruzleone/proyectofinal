@@ -10,7 +10,7 @@ const Productos = () => {
     {
       nombre: "Detector de humo",
       descripcion: "Detector de humo inteligente para hogares y oficinas.",
-      imagen: "detecte-de-humo.png",
+      imagen: "detecte-de-humo.webp",
       precio: "$50",
     },
     {
@@ -22,7 +22,7 @@ const Productos = () => {
     {
       nombre: "Detector de c02",
       descripcion: "Detector de co2 inteligente para hogares y oficinas.",
-      imagen: "detector-c02.png",
+      imagen: "detector-c02.webp",
       precio: "$50",
     },
   ];
@@ -37,13 +37,13 @@ const Productos = () => {
     {
       nombre: "Manguera",
       descripcion: "Extintor de CO2 para fuegos eléctricos y de líquidos inflamables.",
-      imagen: "manguera.png",
+      imagen: "manguera.webp",
       precio: "$150",
     },
     {
       nombre: "Sistema de rociadores automáticos",
       descripcion: "Sistema de rociadores automáticos para la extinción de incendios en espacios cerrados.",
-      imagen: "rociador.png",
+      imagen: "rociador.webp",
       precio: "$300",
     }
   ];

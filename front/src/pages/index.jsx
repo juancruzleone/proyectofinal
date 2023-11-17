@@ -26,7 +26,7 @@ const Home = () => {
           <div className={styles.contenedorFlecha}> 
             <a href="#nuestraApp">
               <Image
-                src="/flecha-abajo.png"
+                src="/flecha-abajo.webp"
                 alt="flecha hacia abajo"
                 className={styles.flechaAbajo}
                 width={70}
