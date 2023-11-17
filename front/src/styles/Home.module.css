@@ -721,10 +721,12 @@
   background-color: black;
   border: none;
   outline: none;
+  width: 30px;
+  border-radius: 50px;
 }
 
 .toggleButton:hover {
-  color: #007bff;
+  color: red;
 }
 
 #pregunta {
@@ -1352,12 +1354,15 @@
 
 .formLabel{
   font-family: "montserrat", sans-serif;
+  margin-left: 15px;
+  margin-bottom: 2px;
 }
 
 .formControl{
   height: 30px;
   margin-top: 5px;
   border-radius: 4px;
+  padding: 15px;
 }
 
 .form button {
@@ -1416,18 +1421,34 @@
 }
 
 .botonIrCheckout{
-  background-color: green;
+  background-color: #C75F00;
   color: white;
   font-family: "montserrat", sans-serif;
   text-align: light;
   display: flex;
   justify-content: center;
   margin: auto;
-  width: 800px;
+  width: 700px;
   padding: 15px;
   border-radius: 4px;
-  margin-top: 15px;
+  margin-top: 460px;
 }
+
+.botonIrCheckout:hover{
+  background-color: #f57600;
+}
+
+.formularioPrelogin h1{
+  text-align: center;
+}
+
+.tituloPrelogin{
+  font-family: "montserrat", sans-serif;
+  color: #C75F00;
+  font-size: 28px;
+  font-weight: 600;
+}
+
 
 
 

@@ -50,7 +50,7 @@ export default function App() {
         </SwiperSlide>
         <SwiperSlide className={styles.carrousel}  style={{
             'background-image':
-              'url(/credicop.webp)',
+              'url(/credicoop.webp)',
           }}>
           <div className={styles.tituloObras} data-swiper-parallax="-3  00">
             <h3>Banco Credicoop</h3>

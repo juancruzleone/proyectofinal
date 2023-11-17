@@ -12,9 +12,9 @@ const carrito = () => {
       <div className={styles.contenedorSeccionCarrito}>
         <div className={styles.contenedorCarrito}>
           <h3>Productos en el carrito</h3>
-        
+          <Link href="" className={styles.botonIrCheckout}>Proceder al checkout</Link>
         </div>
-        <Link href="" className={styles.botonIrCheckout}>Proceder al checkout</Link>
+ 
       </div>
       
       <Footer></Footer>

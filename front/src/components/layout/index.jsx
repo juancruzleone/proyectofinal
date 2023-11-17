@@ -33,7 +33,7 @@ const Layout = ({ children }) => {
         </Link>
         <a href="/prelogin" className={styles.sesion}>
           <Image
-            src="/carrito.webp"
+            src=""
             alt="Carrito"
             className={styles.carrito}
             width={40}
