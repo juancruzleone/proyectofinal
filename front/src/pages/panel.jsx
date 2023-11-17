@@ -15,7 +15,10 @@ const panelAdmin = () => {
     <Layout className={styles.app}>
         <h1 className={styles.tituloPaginas}>Panel admin</h1>
         <div className={styles.contenedorPanelAdmin}>
-            <PanelNav />
+          <div className={styles.posicionMenuPanel}>
+          <PanelNav/> 
+          </div>
+           
             <div className={styles.contenedorContenidoPanel}>
                 <div className={styles.contenidoPanel}>
                      {/* Aca iria el contenido de la solapa del panel que se toque */}

@@ -1390,7 +1390,6 @@
 }
 
 .contenedorPanelAdmin{
-  margin: auto;
   margin-top: 80px;
   display: flex;
 }
@@ -1449,7 +1448,19 @@
   font-weight: 600;
 }
 
+.posicionMenuPanel{
+  margin-left: 40px;
+}
 
+.seccionesNavPanel{
+  font-family: "montserrat", sans-serif;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  padding: 0.3rem;
+  border-bottom: 4px solid transparent;
+}
 
 
 

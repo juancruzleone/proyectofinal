@@ -28,34 +28,34 @@ async function getProductos(filter = {}) {
 
 
   return db
-    .collection("cafes")
+    .collection("productos")
     .find(filterMongo)
     .toArray();
 }
 
 async function getProductobyId(id) {
-  return db.collection("cafes").findOne({ _id: new ObjectId(id) });
+  return db.collection("productos").findOne({ _id: new ObjectId(id) });
 }
 
 const createProducto = async (producto) => {
-  const cafe = await db.collection("cafes").insertOne(producto);
+  const cafe = await db.collection("productos").insertOne(producto);
   producto._id = cafe.insertedId;
 
   return producto;
 };
 
 const remplazarProducto = async (id, producto) => {
-  const productoEditado = await db.collection("cafes").replaceOne({ _id: new ObjectId(id) }, producto);
+  const productoEditado = await db.collection("productos").replaceOne({ _id: new ObjectId(id) }, producto);
   return productoEditado;
 };
 //patch
 const editProducto = async (id, producto) => {
-  const productoEditado = await db.collection("cafes").updateOne({ _id: new ObjectId(id) }, { $set: producto });
+  const productoEditado = await db.collection("productos").updateOne({ _id: new ObjectId(id) }, { $set: producto });
   return productoEditado;
 }
 const eliminarProducto = async (id) => {
   //await db.collection("cafes").updateOne({ _id: new ObjectId(id) }, { $set: { eliminado: true } }); //eliminacion logica
-  const productoEliminado = await db.collection("cafes").deleteOne({ _id: new ObjectId(id) }); //fisica
+  const productoEliminado = await db.collection("productos").deleteOne({ _id: new ObjectId(id) }); //fisica
   return productoEliminado;
 };
 

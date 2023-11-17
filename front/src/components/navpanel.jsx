@@ -7,13 +7,13 @@ const PanelNav = ({ children }) => {
   return (
     <main>
       <nav className={styles.navPanel}>
-        <Link href="/" className={styles.seccionesNav}>
+        <Link href="/" className={styles.seccionesNavPanel}>
           Servicios
         </Link>
-        <Link href="/#" className={styles.seccionesNav}>
+        <Link href="/#" className={styles.seccionesNavPanel}>
           Productos
         </Link>
-        <Link href="/#" className={styles.seccionesNav}>
+        <Link href="/#" className={styles.seccionesNavPanel}>
           Mensajes
         </Link>
       </nav>
