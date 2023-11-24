@@ -1,9 +1,9 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { MongoClient, ObjectId } from "mongodb";
 
-const client = new MongoClient("mongodb+srv://alumnos:alumnos@dwt4ah.kxssn0r.mongodb.net"); // mongodb://localhost:27017 -> 127.0.0.1 ipv6 ipv4
+const client = new MongoClient('mongodb+srv://juan:juan123@proyectoinelar.2eadspu.mongodb.net/'); // mongodb://localhost:27017 -> 127.0.0.1 ipv6 ipv4
 
-const db = client.db("AH20232CP1");
+const db = client.db("inelar");
 
 async function getProductos(filter = {}) {
 
