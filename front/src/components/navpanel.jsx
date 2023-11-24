@@ -1,23 +1,25 @@
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "@/styles/Home.module.css";
 
-const PanelNav = ({ children }) => {
+const PanelNav = ({ onSolapaClick, solapaActiva }) => {
   return (
     <main>
       <nav className={styles.navPanel}>
-        <Link href="/" className={styles.seccionesNavPanel}>
-          Servicios
-        </Link>
-        <Link href="/#" className={styles.seccionesNavPanel}>
+        <button onClick={() => onSolapaClick("productos")} className={solapaActiva === "productos" ? styles.solapaActiva : styles.seccionesNavPanel}>
           Productos
-        </Link>
-        <Link href="/#" className={styles.seccionesNavPanel}>
+        </button>
+        <button onClick={() => onSolapaClick("clientes")} className={solapaActiva === "clientes" ? styles.solapaActiva : styles.seccionesNavPanel}>
+          Clientes
+        </button>
+        <button onClick={() => onSolapaClick("servicios")} className={solapaActiva === "servicios" ? styles.solapaActiva : styles.seccionesNavPanel}>
+          Servicios
+        </button>
+        <button onClick={() => onSolapaClick("mensajes")} className={solapaActiva === "mensajes" ? styles.solapaActiva : styles.seccionesNavPanel}>
           Mensajes
-        </Link>
+        </button>
       </nav>
-      {children}
     </main>
   );
 };
