@@ -33,7 +33,8 @@ const Layout = ({ children }) => {
         </Link>
         <a href="/prelogin" className={styles.sesion}>
           <Image
-            src=""
+            src="/prelogin.png"
+            id="xd"
             alt="Carrito"
             className={styles.carrito}
             width={40}
@@ -42,9 +43,10 @@ const Layout = ({ children }) => {
         </a>
         <a href="/carrito" className={styles.carrito}>
           <Image
-            src="/carrito.webp"
+            src="/carrito.png"
             alt="Carrito"
             className={styles.carrito}
+            id={styles.iconoCarrito}
             width={40}
             height={40}
           />

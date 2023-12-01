@@ -1,5 +1,5 @@
 import * as service from "../services/productos.services.js";
-import * as view from "../views/productos.views.js";
+
 
 const getProductos = (req, res) => {
   service.getProductos({elminado: true}).then((productos) => {
