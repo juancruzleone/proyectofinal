@@ -31,7 +31,7 @@ const Layout = ({ children }) => {
         <Link href="/panel" className={styles.seccionesNav}>
           Panel admin
         </Link>
-        <a href="/prelogin" className={styles.sesion}>
+        <a href="/login" className={styles.sesion}>
           <Image
             src="/prelogin.png"
             id="xd"
