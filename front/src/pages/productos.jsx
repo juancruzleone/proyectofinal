@@ -39,12 +39,21 @@ const Productos = () => {
       <div className={styles.contenedorPagina}>
         <h1 className={styles.tituloPaginas}>Productos</h1>
         <div className={styles.posicionSeccionProductos}>
-          {/* Puedes mantener los botones de categoría si lo deseas */}
-          <div className={styles.contenedorCategorias}>
-            <a href="#" onClick={() => cambiaCategoria("detección")}>
+          <div className={styles.contenedorCategorias} id={styles.contenedorCategoriaProductos}>
+            {/* Aplica la clase condicional aquí */}
+            <a
+              href="#"
+              onClick={() => cambiaCategoria("detección")}
+              className={categoriaSeleccionada === "detección" ? styles.categoriaSeleccionadaProducto : ""}
+            >
               Detección
             </a>
-            <a href="#" onClick={() => cambiaCategoria("extinción")}>
+            {/* Aplica la clase condicional aquí */}
+            <a
+              href="#"
+              onClick={() => cambiaCategoria("extinción")}
+              className={categoriaSeleccionada === "extinción" ? styles.categoriaSeleccionadaProducto : ""}
+            >
               Extinción
             </a>
           </div>
@@ -61,7 +70,7 @@ const Productos = () => {
                 <h3>{producto.name}</h3>
                 <p>{producto.price}</p>
                 <Link href={`/detalle/${producto._id}`} className={styles.botonVerMas}>
-                 Ver más
+                  Ver más
                 </Link>
               </div>
             ))}

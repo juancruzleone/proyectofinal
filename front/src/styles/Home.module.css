@@ -228,8 +228,16 @@
   }
 }
 
+/* Otros estilos ... */
+
+/* Otros estilos ... */
+
+
+
 .nav {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 2rem;
   margin-left: 5px;
   background-color: #121212;
@@ -248,6 +256,27 @@
 .seccionesNav:hover {
   border-bottom: 4px solid #C75F00;
 }
+
+.sesion,
+.carrito {
+  width: 40px;
+  height: 40px;
+}
+
+/* Alinea al extremo derecho */
+.sesion {
+  margin-left: auto;
+  margin-right: 10px; /* Ajusta según sea necesario */
+}
+
+.carrito {
+  margin-right: 60px; /* Ajusta según sea necesario */
+  margin-left: 20px;
+}
+
+
+
+
 
 
 .tituloHome{
@@ -278,6 +307,16 @@
   font-size: 42px;
   text-align: center;
   margin-top: 80px;
+  font-weight: 600;
+  color: #C75F00;
+}
+
+.tituloServicio{
+  font-family: "montserrat", sans-serif;
+  padding-left: 100px;
+  font-size: 42px;
+  text-align: left;
+  margin-top: 100px;
   font-weight: 600;
   color: #C75F00;
 }
@@ -399,7 +438,7 @@
 
 
 .contenedorMapa{
-  padding: 20px;
+  padding-right: 60px;
 }
 
 .contenedorMapa iframe{
@@ -546,10 +585,16 @@
   display: flex;
 }
 
+.posicionSeccionProductos .contenedorCategorias{
+  margin-top: 50px;
+}
+
 .contenedorCategorias{
   background-color: #121212;
   border-radius: 4px;
-  margin-top: 100px;
+  margin-top: 115px;
+  height: 300px;
+  margin-right: 60px;
 }
 
 .contenedorCategorias a{
@@ -560,16 +605,14 @@
   border: 3px solid transparent;
 }
 
-.contenedorCategorias a:hover{
-  color: #f57600;
-}
 
-.carrito{
-  width: 40px;
-  height: 40px;
-  margin-left: auto;
-  margin-right: 20px;
-}
+
+
+
+
+
+
+/* Ajuste para reducir el espacio entre prelogin y carrito */
 
 .iconoServicios{
   width: 140px;
@@ -1050,10 +1093,12 @@
   font-family: "montserrat", sans-serif;
   margin-bottom: 5px;
   margin-top: 20px;
+  color: #C75F00;
 }
 
 .fotoServicio{
   border-radius: 10px;
+  margin-top: 40px;
 }
 
 .contenedorTextoServicio{
@@ -1112,6 +1157,7 @@
 
 .contenedorProductos{
   display: flex;
+  flex-wrap: wrap;
   margin: auto;
   margin-top: 100px;
 }
@@ -1123,6 +1169,7 @@
   max-width: 400px;
   margin: auto;
   margin-bottom: 140px;
+  margin-top: 100px;
 }
 
 .formularioContacto label {
@@ -1154,6 +1201,54 @@
 
 .formularioContacto button:hover {
   background-color: #C75F00;
+}
+
+
+.formularioLogin {
+  display: flex;
+  flex-direction: column;
+  width: 3000px;
+  max-width: 400px;
+  margin: auto;
+  margin-bottom: 140px;
+  margin-top: 30px;
+}
+
+.formularioLogin label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  font-family: "montserrat", sans-serif;
+}
+
+.formularioLogin input,
+.formularioLogin textarea {
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #121212;
+}
+
+.formularioLogin button {
+  font-family: "montserrat", sans-serif;
+  font-weight: lighter;
+  font-size: 16px;
+  padding: 0.6rem 1rem;
+  background-color: #f57600;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.formularioLogin button:hover {
+  background-color: #C75F00;
+}
+
+.formularioLogin p{
+  text-align: center;
+  font-family: "montserrat", sans-serif;
+  margin-top: 30px;
 }
 
 .swiper {
@@ -1277,12 +1372,6 @@
   font-family: "montserrat", sans-serif;
 }
 
-.contenidoProducto p{
-  font-weight: bold;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
 .contenidoProducto a{
   background-color: #C75F00;
   padding: 4px;
@@ -1312,13 +1401,18 @@
   margin-top: 10px;
 }
 
-.contenedorCarrito{
+.contenedorCarrito {
   margin: auto;
   background-color: #121212;
   width: 60%;
   height: 600px;
   margin-top: 80px;
   border-radius: 10px;
+  overflow-y: auto; /* Agrega un scroll vertical si es necesario */
+}
+
+.contenedorCarrito p{
+  font-family: "montserrat", sans-serif;
 }
 
 .contenedorCarrito h3{
@@ -1329,6 +1423,55 @@
   text-align: center;
   margin-top: 10px;
   /*text-decoration: underline 5px #C75F00;*/
+}
+
+.tarjetaProductoCarrito{
+  display: flex;
+  background-color:#1f1f1f;
+  width: 500px;
+  height: 120px;
+  border-radius: 4px;
+  margin: 30px;
+  margin-left: 30px;
+}
+
+.tarjetaProductoCarrito button{
+  margin-left: 350px;
+}
+
+.tarjetaProductoCarrito img{
+  width: 80px;
+  height: 80px;
+}
+
+.tarjetaProductoCarrito {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1f1f1f; /* Fondo oscuro */
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  margin-left: 80px;
+  margin-top: 60px;
+}
+
+.tarjetaProductoCarrito .imagenProductoDetalleCarrito {
+  width: 80px; /* Ajusta el ancho según tu preferencia */
+  height: 80px; /* Ajusta la altura según tu preferencia */
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tarjetaProductoCarrito .detalleProductoCarrito {
+  flex-grow: 1;
+}
+
+.nombreProductoCarrito{
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .contenedorDatosPagos{
@@ -1358,32 +1501,6 @@
   margin-bottom: 2px;
 }
 
-.formControl{
-  height: 30px;
-  margin-top: 5px;
-  border-radius: 4px;
-  padding: 15px;
-}
-
-.form button {
-  font-family: "montserrat", sans-serif;
-  font-weight: lighter;
-  font-size: 16px;
-  padding: 0.3rem 1rem;
-  background-color: #f57600;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.form button:hover {
-  background-color: #C75F00;
-}
-
-#botonLogin{
-  margin-top: 15px;
-}
 
 #primerInput{
   margin-bottom: 15px;
@@ -1394,17 +1511,17 @@
   display: flex;
 }
 
-.navPanel a{
+.navPanel button{
   display: block;
   background-color: #C75F00;
-  margin: 10px;
+  margin: 20px;
   border-radius: 5px;
   padding: 10px;
-  width: 200px;
+  width: 300px;
   text-align: center;
 }
 
-.navPanel a:hover{
+.navPanel button:hover{
   background-color:#f57600
 }
 
@@ -1416,7 +1533,7 @@
   background-color: #121212;
   border-radius: 10px;
   width: 1000px;
-  height: 700px;
+  height: 900px;
 }
 
 .botonIrCheckout{
@@ -1430,11 +1547,16 @@
   width: 700px;
   padding: 15px;
   border-radius: 4px;
-  margin-top: 460px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .botonIrCheckout:hover{
   background-color: #f57600;
+}
+
+.formularioPrelogin{
+  margin-top: 100px;
 }
 
 .formularioPrelogin h1{
@@ -1449,7 +1571,7 @@
 }
 
 .posicionMenuPanel{
-  margin-left: 40px;
+  margin-left: 100px;
 }
 
 .seccionesNavPanel{
@@ -1461,6 +1583,232 @@
   padding: 0.3rem;
   border-bottom: 4px solid transparent;
 }
+
+.solapaActiva{
+  font-family: "montserrat", sans-serif;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  padding: 0.3rem;
+  border-bottom: 4px solid transparent;
+}
+
+.precioDetalle{
+  font-family: "montserrat", sans-serif;
+  font-size: 22px
+}
+.categoriaDetalle{
+  background-color: #121212;
+  text-align: center;
+  padding: 6px;
+  width: 110px;
+  border-radius: 4px;
+  font-family: "montserrat", sans-serif;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.precioDetalle{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: medium;
+}
+
+.contenedorProductosPanel{
+  display: block;
+  padding-left: 20px;
+  margin-top: 40px;
+}
+
+.tarjetaProductoPanel{
+  background-color: #1d1d1d;
+  border-radius: 7px;
+  padding: 20px;
+  margin: 30px;
+  width: 600px;
+  font-family: "montserrat", sans-serif;
+}
+
+.tarjetaProductoPanelListado{
+  background-color: #1d1d1d;
+  border-radius: 7px;
+  padding: 20px;
+  margin: 30px;
+  width: 600px;
+  font-family: "montserrat", sans-serif;
+}
+
+.tarjetaProductoPanelListado p{
+  margin-top: 5px;
+}
+
+#primeroListado{
+  margin-top: 20px;
+}
+
+.contenedorCategoria p{
+  font-family: "montserrat", sans-serif;
+  background-color: #C75F00;
+  padding: 5px;
+  border-radius: 4px;
+  margin: 10px;
+  font-weight: 500;
+}
+
+.contenedorCategoria:hover{
+  background-color: #f57600;
+  border-radius: 4px;
+}
+
+/* ... (otras reglas de estilo) */
+.contenedorServicios{
+  max-height: 600px; /* Ajusta la altura máxima deseada */
+  overflow-y: auto; /* Agrega un scroll vertical cuando sea necesario */
+  margin-top: 60px;
+}
+
+.contenedorClientes {
+  max-height: 600px; /* Ajusta la altura máxima deseada */
+  overflow-y: auto; /* Agrega un scroll vertical cuando sea necesario */
+  margin-top: 60px;
+}
+
+.contenedorCategorias {
+  background-color: #121212;
+  border-radius: 4px;
+  margin-top: 50px; /* Ajusta el margen según sea necesario */
+  margin-left: 20px;
+ 
+}
+
+#contenedorCategoriaProductos{
+  margin-top: 115px;
+}
+
+.categoriaSeleccionada {
+  /* Estilos para la categoría seleccionada */
+  background-color: #f57600; /* Puedes ajustar el color según tus preferencias */
+  color: #fff; /* Cambia el color del texto para que sea legible sobre el fondo seleccionado */
+}
+
+.categoriaSeleccionadaProducto {
+  /* Estilos para la categoría seleccionada */
+  background-color: #f57600; /* Puedes ajustar el color según tus preferencias */
+  color: #fff; /* Cambia el color del texto para que sea legible sobre el fondo seleccionado */
+  padding: 4px;
+  border-radius: 2px;
+}
+
+.registroLogin{
+  color: blue;
+  text-decoration: underline;
+  margin-left: 10px;
+}
+
+.botonAgregarCarrito{
+  background-color: #C75F00;
+  padding: 7px;
+  border-radius: 5px;
+  color: white;
+  font-size: 14px;
+  font-family: "montserrat", sans-serif;
+
+}
+
+
+.Modal {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #121212;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  height: 140px;
+}
+
+.Modal p{
+  font-family: "montserrat", sans-serif;
+  font-weight: bold;
+}
+
+.Modal a{
+  font-family: "montserrat", sans-serif;
+  margin-left: 70px;
+  margin-top:20px;
+  text-decoration: underline;
+}
+
+.Modal button{
+  background-color: transparent;
+  margin-top:20px;
+  border: 0px
+}
+
+
+.Modal h2 {
+  font-family: "montserrat", sans-serif;
+  margin-top: 10px;
+  margin-bottom: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.detalleProductoCarrito{
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.detalleProductoCarrito p{
+  margin-top: 3px;
+}
+
+.categoriaProductoCarrito{
+  background-color: gray;
+  border-radius: 4px;
+  margin-top: 100px;
+  margin-bottom: 10px;
+  width: 120px;
+  text-align: center;
+}
+
+.imagenProductoDetalle{
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  min-height: 10px;
+}
+
+.botonEliminar{
+  background-color: rgb(179, 19, 19);
+  border: 0px;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.botonEliminar img{
+  width: 30px;
+  height: 30px;
+}
+
+
+
+
+
+/* ... (otras reglas de estilo) */
+
+
 
 
 

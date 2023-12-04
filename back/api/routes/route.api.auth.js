@@ -6,5 +6,6 @@ const route = Router()
 route.post('/cuenta', [validarCuenta],controllers.crearCuenta)
 //Login
 route.post('/cuenta/login', [validarCuenta],controllers.login)
-
+//Salir
+route.delete("cuenta", controllers.logout)
 export default route

@@ -1,53 +1,91 @@
-import React, { useState } from "react";
-import Link from "next/link";
+import React, { useState, useEffect } from "react";
 import Layout from "@/components/layout";
 import Footer from "@/components/Footer";
 import styles from "@/styles/Home.module.css";
+import * as yup from "yup";
 
 const SolicitarProvisiones = () => {
-  // Definir el estado inicial del formulario
   const [formData, setFormData] = useState({
     nombre: "",
     email: "",
     telefono: "",
     direccion: "",
-    producto: "",
+    dispositivo: "",
     cantidad: "",
     fecha: "",
+    category: "provisiones", // Agregar la categoría del servicio
   });
 
-  // Definir una función para manejar los cambios en los campos del formulario
+  const [productList, setProductList] = useState([]);
+
+  useEffect(() => {
+    const obtenerProductos = async () => {
+      try {
+        const response = await fetch("http://localhost:2023/api/productos");
+        const data = await response.json();
+
+        setProductList(data);
+      } catch (error) {
+        console.error("Error al obtener productos:", error);
+      }
+    };
+
+    obtenerProductos();
+  }, []);
+
+  const schema = yup.object().shape({
+    nombre: yup.string().required("El nombre es obligatorio"),
+    email: yup.string().email("Introduce un email válido").required("El email es obligatorio"),
+    telefono: yup.string().required("El teléfono es obligatorio"),
+    direccion: yup.string().required("La dirección es obligatoria"),
+    dispositivo: yup.string().required("Selecciona un dispositivo"),
+    cantidad: yup.number().required("La cantidad es obligatoria").positive("La cantidad debe ser positiva"),
+    fecha: yup.date().required("La fecha es obligatoria"),
+  });
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  // Definir una función para enviar los datos del formulario al servidor
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      // Enviar una petición POST a la ruta /api/provisiones con los datos del formulario
-      const res = await fetch("/api/provisiones", {
+      await schema.validate(formData, { abortEarly: false });
+
+      const requestBody = {
+        nombre: formData.nombre,
+        email: formData.email,
+        telefono: formData.telefono,
+        direccion: formData.direccion,
+        dispositivo: formData.dispositivo,
+        cantidad: formData.cantidad,
+        fecha: formData.fecha,
+        category: formData.category, // Agregar la categoría del servicio
+      };
+
+      const res = await fetch("http://localhost:2023/api/servicios", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(requestBody),
       });
-      // Verificar si la respuesta es exitosa
+
       if (res.ok) {
-        // Convertir la respuesta a un objeto JSON
         const data = await res.json();
-        // Mostrar un mensaje de éxito
         alert("Solicitud enviada con éxito");
       } else {
-        // Mostrar un mensaje de error según el código de estado
         alert(`Ocurrió un error al enviar la solicitud: ${res.status}`);
       }
     } catch (err) {
-      // Mostrar un mensaje de error por problemas de red o del servidor
-      console.error(err);
-      alert("Ocurrió un error al enviar la solicitud");
+      if (err.name === 'ValidationError') {
+        const errorMessages = err.errors.join('\n');
+        alert(`\n${errorMessages}`);
+      } else {
+        console.error(err);
+        alert("Ocurrió un error al enviar la solicitud");
+      }
     }
   };
 
@@ -98,19 +136,20 @@ const SolicitarProvisiones = () => {
             onChange={handleChange}
             required
           />
-          <label htmlFor="producto">Producto:</label>
+          <label htmlFor="dispositivo">Dispositivo:</label>
           <select
-            id="producto"
-            name="producto"
-            value={formData.producto}
+            id="dispositivo"
+            name="dispositivo"
+            value={formData.dispositivo}
             onChange={handleChange}
             required
           >
             <option value="">Selecciona una opción</option>
-            <option value="detectores">Detectores</option>
-            <option value="extintores">Extintores</option>
-            <option value="mangueras">Mangueras</option>
-            <option value="centrales">Centrales</option>
+            {productList.map((product) => (
+              <option key={product.id} value={product.name}>
+                {product.name}
+              </option>
+            ))}
           </select>
           <label htmlFor="cantidad">Cantidad:</label>
           <input

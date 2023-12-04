@@ -11,7 +11,7 @@ import styles from "@/styles/Home.module.css";
 
 const Home = () => {
   return (
-    <Layout className={styles.app}>
+    <Layout>
       {/*Ordenar mejor el codigo de nuestra App, para que el titulo quede en el mismo contenedor que el parrafo y haga display flex con el circulo y la imagen*/}
       <div className={styles.tituloHome}>
         <Image
@@ -43,11 +43,11 @@ const Home = () => {
         <div className={styles.circulo}>
           <div className={styles.celularApp}>
             <Image
-              src="/app.webp"
+              src="/pantallacarga.png"
               alt="mockup app mobile inelar"
               className={styles.celularImagen}
-              width={200}
-              height={270}
+              width={400}
+              height={500}
             />
           </div>
         </div>

@@ -1,11 +1,10 @@
-import React, { useState } from "react";
-import Link from "next/link";
+import React, { useState, useEffect } from "react";
 import Layout from "@/components/layout";
 import Footer from "@/components/Footer";
 import styles from "@/styles/Home.module.css";
+import * as yup from "yup";
 
 const SolicitarInstalacion = () => {
-  // Definir el estado inicial del formulario
   const [formData, setFormData] = useState({
     nombre: "",
     email: "",
@@ -13,26 +12,65 @@ const SolicitarInstalacion = () => {
     direccion: "",
     dispositivo: "",
     fecha: "",
+    cantidad: "", 
+    category: "instalaciones", // Valor predeterminado para la categoría
   });
 
-  // Definir una función para manejar los cambios en los campos del formulario
+  const [productos, setProductos] = useState([]);
+
+  useEffect(() => {
+    const obtenerProductos = async () => {
+      try {
+        const response = await fetch("http://localhost:2023/api/productos");
+        const data = await response.json();
+        setProductos(data);
+      } catch (error) {
+        console.error("Error al obtener productos:", error);
+      }
+    };
+
+    obtenerProductos();
+  }, []);
+
+  const schema = yup.object().shape({
+    nombre: yup.string().required("El nombre es obligatorio"),
+    email: yup.string().email("Introduce un email válido").required("El email es obligatorio"),
+    telefono: yup.string().required("El teléfono es obligatorio"),
+    direccion: yup.string().required("La dirección es obligatoria"),
+    dispositivo: yup.string().required("Selecciona un dispositivo"),
+    cantidad: yup.number().required("La cantidad es obligatoria").positive("La cantidad debe ser positiva"),
+    fecha: yup.date().required("La fecha es obligatoria"),
+  });
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  // Definir una función para enviar los datos del formulario al servidor
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      // Enviar una petición POST a la ruta /api/solicitudes con los datos del formulario
-      const res = await fetch("/api/solicitudes", {
+      // Crear un objeto con los campos necesarios para la solicitud
+      const requestBody = {
+        nombre: formData.nombre,
+        email: formData.email,
+        telefono: formData.telefono,
+        direccion: formData.direccion,
+        dispositivo: formData.dispositivo,
+        fecha: formData.fecha,
+        cantidad: formData.cantidad, // Agregar la cantidad al objeto
+        category: formData.category,
+      };
+
+      // Enviar una petición POST a la ruta /api/servicios con los datos del formulario
+      const res = await fetch("http://localhost:2023/api/servicios", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(requestBody),
       });
+
       // Verificar si la respuesta es exitosa
       if (res.ok) {
         // Convertir la respuesta a un objeto JSON
@@ -56,8 +94,7 @@ const SolicitarInstalacion = () => {
       <div className={styles.contenedorContenidoServicio}>
         <p className={styles.textoSolicitudServicios}>
           Si quieres solicitar nuestro servicio de instalación de dispositivos,
-          por favor completa el siguiente formulario con tus datos y los detalles
-          de tu solicitud. Nos pondremos en contacto contigo lo antes posible
+          por favor completa el siguiente formulario con tus datos y los detalles de tu solicitud. Nos pondremos en contacto contigo lo antes posible
           para confirmar la fecha y el precio.
         </p>
         <form onSubmit={handleSubmit} className={styles.formulario}>
@@ -106,11 +143,23 @@ const SolicitarInstalacion = () => {
             required
           >
             <option value="">Selecciona una opción</option>
-            <option value="detectores">Detectores</option>
-            <option value="extintores">Extintores</option>
-            <option value="mangueras">Mangueras</option>
-            <option value="centrales">Centrales</option>
+            {productos.map((producto) => (
+              <option key={producto.id} value={producto.name}>
+                {producto.name}
+              </option>
+            ))}
           </select>
+          {/* Agregar el campo cantidad al formulario */}
+          <label htmlFor="cantidad">Cantidad:</label>
+          <input
+            type="number"
+            id="cantidad"
+            name="cantidad"
+            value={formData.cantidad}
+            onChange={handleChange}
+            required
+            min="1" // Asegurar que la cantidad sea mayor o igual a 1
+          />
           <label htmlFor="fecha">Fecha deseada:</label>
           <input
             type="date"

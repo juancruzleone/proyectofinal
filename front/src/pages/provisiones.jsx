@@ -8,7 +8,7 @@ import styles from "@/styles/Home.module.css";
 const Provisiones = () => {
   return (
     <Layout>
-      <h1 className={styles.tituloPaginas}>Provisiones</h1>
+      <h1 className={styles.tituloServicio}>Provisiones</h1>
       <div className={styles.contenedorPosicionamientoContenidoServicio}>
         <div className={styles.contenedorTextoServicio}>
           <p className={styles.textoServicios}>En Inelar, sabemos que el éxito de cualquier proyecto depende de los recursos adecuados. Ofrecemos provisiones tecnológicas de primera calidad para garantizar que tengas todo lo que necesitas para llevar a cabo tu proyecto con éxito.</p><br />
@@ -19,8 +19,8 @@ const Provisiones = () => {
           src="/servicio-provisiones-.webp"
           alt="Imagen servicio provisiones"
           className={styles.fotoServicio}
-          width={400}
-          height={400}
+          width={300}
+          height={300}
         />     
       </div>
       <Link href="/solicitar-provisiones" className={styles.botonServicio}>Solicitar provisiones</Link>

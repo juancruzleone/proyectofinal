@@ -1,10 +1,10 @@
 import { MongoClient, ObjectId } from "mongodb";
 import bcrypt from 'bcrypt'
 
-const client = new MongoClient("mongodb+srv://alumnos:alumnos@dwt4ah.kxssn0r.mongodb.net"); // mongodb://localhost:27017 -> 127.0.0.1 ipv6 ipv4
+const client = new MongoClient('mongodb+srv://juan:juan123@proyectoinelar.2eadspu.mongodb.net/'); // mongodb://localhost:27017 -> 127.0.0.1 ipv6 ipv4
 
 const db = client.db("inelar");
-const cuentaCollention = db.collection("cuenta")
+const cuentaCollention = db.collection("cuentas")
 
 async function crearCuenta(cuenta){
     await client.connect()

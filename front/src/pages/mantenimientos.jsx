@@ -8,7 +8,7 @@ import styles from "@/styles/Home.module.css";
 const Mantenimientos = () => {
   return (
     <Layout className={styles.app}>
-      <h1 className={styles.tituloPaginas}>Mantenimientos</h1>
+      <h1 className={styles.tituloServicio}>Mantenimientos</h1>
       <div className={styles.contenedorPosicionamientoContenidoServicio}>
         <div className={styles.contenedorTextoServicio}>
           <p className={styles.textoServicios}>Inelar presta servicios de mantenimientos a todos los clientes que lo deseen. Contamos con equipo de última tecnología para llevar a cabo los mantenimientos y un equipo de técnicos especializados para su realización.</p><br />
@@ -23,8 +23,8 @@ const Mantenimientos = () => {
           src="/mantenimiento servicio.webp"
           alt="Imagen servicio mantenimiento"
           className={styles.fotoServicio}
-          width={400}
-          height={400}
+          width={300}
+          height={300}
         />
       </div>
       <Link href="/solicitar-mantenimiento" className={styles.botonServicio}>Solicitar mantenimiento</Link>

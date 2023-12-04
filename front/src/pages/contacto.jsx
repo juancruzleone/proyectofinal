@@ -34,7 +34,8 @@ const Contacto = () => {
     event.preventDefault();
     try {
       await contactSchema.validate(formData, { abortEarly: false });
-      await fetch("/contacto", {
+      console.log("Enviando mensaje:", formData); // Agrega esta línea
+      await fetch("http://localhost:2023/api/contactos", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

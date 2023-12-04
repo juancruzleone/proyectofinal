@@ -8,7 +8,7 @@ import styles from "@/styles/Home.module.css";
 const Instalaciones = () => {
   return (
     <Layout className={styles.app}>
-      <h1 className={styles.tituloPaginas}>Instalaciones</h1>
+      <h1 className={styles.tituloServicio}>Instalaciones</h1>
       <div className={styles.contenedorPosicionamientoContenidoServicio}>
         <div className={styles.contenedorTextoServicio}>
           <p className={styles.textoServicios}>En Inelar, comprendemos la importancia de la implementación de dispositivos de manera eficiente y efectiva. Nuestro equipo especializado está dedicado a garantizar que tus dispositivos se instalen de manera óptima y funcionen sin problemas desde el primer momento.</p><br />
@@ -19,8 +19,8 @@ const Instalaciones = () => {
           src="/servicio-instalaciones-imagen.webp"
           alt="Imagen servicio instalaciones"
           className={styles.fotoServicio}
-          width={400}
-          height={400}
+          width={300}
+          height={300}
         />
       </div>
       <Link href="/solicitar-instalacion" className={styles.botonServicio}>Solicitar instalación</Link>
