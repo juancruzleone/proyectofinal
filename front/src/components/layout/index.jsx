@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
           Home
         </Link>
         <Link href="/quienes-somos" className={styles.seccionesNav}>
-          Quienes somos
+          Quiénes somos
         </Link>
         <Link href="/servicios" className={styles.seccionesNav}>
           Servicios
@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
           Productos
         </Link>
         <Link href="/preguntas-frecuentes" className={styles.seccionesNav}>
-          FAQ`S
+          Preguntas frecuentes
         </Link>
         <Link href="/certificaciones" className={styles.seccionesNav}>
           Certificaciones

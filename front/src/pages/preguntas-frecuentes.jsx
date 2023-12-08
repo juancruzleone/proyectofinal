@@ -82,7 +82,7 @@ const PreguntasFrecuentes = () => {
             }`}
             key={index}
             style={{
-              marginBottom: preguntaAbierta === index ? "0px" : "0",
+              marginBottom: preguntaAbierta === index ? "20px" : "0",
               height: preguntaAbierta === index ? "auto" : "60px",
             }}
           >

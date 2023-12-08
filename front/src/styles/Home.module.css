@@ -245,7 +245,7 @@
 
 .seccionesNav {
   font-family: "montserrat", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   color: white;
   text-decoration: none;
   margin: 0 0.5rem;
@@ -646,7 +646,7 @@
 .contenedorTextoQuienesSomos{
   padding: 20px 200px;
   margin-top: 40px;
-  background-color: #C75F00;
+  background-color: #121212;
   border-radius: 40px;
   margin: 80px;
   padding: 40px;
@@ -659,6 +659,7 @@
   justify-content: center;
   text-align: left;
   font-family: "montserrat", sans-serif;
+  color: white;
 
 }
 
@@ -710,7 +711,6 @@
   padding: 10px;
   margin: 12px;
   border-radius: 6px;
-
 }
 
 
@@ -749,7 +749,7 @@
   width: 600px;
   height: 60px;
   background-color: #C75F00;
-  margin-top: 20px;
+  margin-top: 40px;
   border-radius: 10px;
 }
 

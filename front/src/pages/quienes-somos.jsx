@@ -6,7 +6,7 @@ import styles from "@/styles/Home.module.css";
 const quienesSomos = () => {
   return (
     <Layout>
-      <h1 className={styles.tituloPaginas}>Quienes somos</h1>
+      <h1 className={styles.tituloPaginas}>Quiénes somos</h1>
       <div className={styles.contenedorTextoQuienesSomos}>
         <p>
           <span>INELAR</span> , una empresa de más de 50 años especializada en

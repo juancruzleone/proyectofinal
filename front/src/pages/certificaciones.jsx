@@ -9,7 +9,7 @@ const certificaciones = () => {
     <Layout>
       <h1 className={styles.tituloPaginas}>Certificaciones</h1>
       <p className={styles.subtituloCertificaciones}>
-        Licencias Nacionales e internacionales
+        Licencias nacionales e internacionales
       </p>
       <div className={styles.posicionContenedorCertificaciones}>
         <div className={styles.contenedorCertificaciones}>

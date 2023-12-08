@@ -64,7 +64,7 @@ const Contacto = () => {
 
   return (
     <Layout className={styles.app}>
-      <h1 className={styles.tituloPaginas}>Contactános</h1>
+      <h1 className={styles.tituloPaginas}>Contacto</h1>
       <div className={styles.posicionContacto}>
         <div className={styles.contenedorMapa}>
           <iframe
